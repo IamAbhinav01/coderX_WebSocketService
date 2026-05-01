@@ -11,7 +11,7 @@ const cache = new Redis();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ['http://localhost:5173', 'http://localhost:5174'], // Vite default and secondary ports
+    origin: ['http://localhost:5173', 'http://localhost:5174'], 
     methods: ['GET', 'POST'],
   },
 });
@@ -19,7 +19,7 @@ const io = new Server(httpServer, {
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
 
-  // notify client
+  
   socket.emit('foo', `Welcome user ${socket.id}`);
 
   socket.on('setUserId', async (userId) => {
@@ -35,13 +35,13 @@ io.on('connection', (socket) => {
   socket.on('foo', (msg) => {
     console.log('foo event received:', msg);
 
-    // broadcast message
+    
     io.emit('foo', msg);
   });
 
   socket.on('create-something', (msg, callback) => {
     console.log('create-something event received:', msg);
-    // broadcast or acknowledge
+    
     io.emit('foo', msg);
     if (typeof callback === 'function') {
       callback();
