@@ -1,0 +1,31 @@
+{
+  "name": "coderx_websocketservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/socket.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamAbhinav01/coderX_WebSocketService.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/IamAbhinav01/coderX_WebSocketService/issues"
+  },
+  "homepage": "https://github.com/IamAbhinav01/coderX_WebSocketService#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^5.10.1",
+    "nodemon": "^3.1.14",
+    "socket-io": "^1.0.0",
+    "socket.io": "^4.8.3"
+  }
+}
