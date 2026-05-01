@@ -11,7 +11,7 @@ const cache = new Redis();
 
 const io = new Server(httpServer, {
   cors: {
-    origin: 'http://localhost:5173', // Vite default port
+    origin: ['http://localhost:5173', 'http://localhost:5174'], // Vite default and secondary ports
     methods: ['GET', 'POST'],
   },
 });
